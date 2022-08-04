@@ -3,9 +3,5 @@ sudo apt-get install unzip
 wget https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip
 unzip jenkinsfile-runner-1.0-beta-30.zip -d jenkinsfile-runner
 chmod -R 777 jenkinsfile-runner
-./jenkinsfile-runner/bin/jenkinsfile-runner cli -w jenkins/
-install-plugin https://updates.jenkins.io/download/plugins/durable-task/1.35/durable-task.hpi -deploy
+./jenkinsfile-runner/bin/jenkinsfile-runner cli -w install-plugin https://updates.jenkins.io/download/plugins/durable-task/1.35/durable-task.hpi -deploy
 ./jenkinsfile-runner/bin/jenkinsfile-runner run
-#./jenkinsfile-runner/bin/jenkinsfile-runner -w /tmp/jenkins -p /tmp/jenkins_home/plugins -f ~/. -a "param1=Hello&param2=value2"
-# chmod 777 Jenkinsfile.groovy
-# groovy Jenkinsfile.groovy
