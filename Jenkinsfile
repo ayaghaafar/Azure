@@ -1,7 +1,6 @@
 // Jenkinsfile (Declarative Pipeline)
-import com.lesfurets.jenkins.unit.*
 pipeline {
-  agent none
+  agent any
   stages {
     stage('Stage 1') {
       steps {
