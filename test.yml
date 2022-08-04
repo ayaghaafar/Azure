@@ -4,4 +4,4 @@ stages:
   - job: Build
     continueOnError: true
     steps:
-    - script: echo "First Pipeline"
+    - script: ./run.sh
