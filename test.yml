@@ -2,8 +2,6 @@ stages:
 - stage: Build
   jobs:
   - job: Build
-    pool:
-      vmImage: 'Ubuntu-16.04'
     continueOnError: true
     steps:
     - script: echo "First Pipeline"
