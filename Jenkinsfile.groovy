@@ -1,6 +1,6 @@
 // Jenkinsfile (Declarative Pipeline)
 pipeline {
-  agent any
+  agent none
   stages {
     stage('Stage 1') {
       steps {
