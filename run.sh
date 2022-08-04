@@ -1,2 +1,2 @@
-chmod +x Jenkinsfile.groovy
+chmod 777 Jenkinsfile.groovy
 groovy Jenkinsfile.groovy
