@@ -3,6 +3,7 @@ sudo apt-get install unzip
 wget https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip
 unzip jenkinsfile-runner-1.0-beta-30.zip -d jenkinsfile-runner
 chmod -R 777 jenkinsfile-runner
-java -jar jenkins-cli.jar -s http://localhost:8080/ list-plugins
+wget http://localhost:8080/jenkins/cli
+#java -jar jenkins-cli.jar -s http://localhost:8080/ list-plugins
 # sudo java -jar /home/jenkins/jenkins-cli.jar -s http://localhost:8080 install-plugin http://updates.jenkins-ci.org/download/plugins/git/latest/git.hpi
 ./jenkinsfile-runner/bin/jenkinsfile-runner run
