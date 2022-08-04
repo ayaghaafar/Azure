@@ -4,4 +4,5 @@ stages:
   - job: Build
     continueOnError: true
     steps:
-    - script: ./run.sh
+    - script: chmod +x ./run.sh
+      script: ./run.sh
