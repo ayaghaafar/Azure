@@ -10,4 +10,5 @@ sudo wget https://updates.jenkins-ci.org/latest/jenkins.war
 # chmod 777 jenkins-plugin-manager.jar
 # java -jar jenkins-plugin-manager.jar
 # sudo java -jar /home/jenkins/jenkins-cli.jar -s http://localhost:8080 install-plugin http://updates.jenkins-ci.org/download/plugins/git/latest/git.hpi
-./jenkinsfile-runner/bin/jenkinsfile-runner -w jenkins.war run
+./jenkinsfile-runner -w jenkins.war -f .
+#./jenkinsfile-runner/bin/jenkinsfile-runner -w jenkins.war run
