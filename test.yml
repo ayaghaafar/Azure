@@ -4,4 +4,6 @@ stages:
   - job: Build
     continueOnError: true
     steps:
-     - script: ./run.sh
+     - task: ShellScript@2
+       inputs:
+        scriptPath: ./run.sh
