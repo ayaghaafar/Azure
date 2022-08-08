@@ -1,4 +1,6 @@
 // Jenkinsfile (Declarative Pipeline)
+import hudson.util.RemotingDiagnostics
+import jenkins.model.Jenkins
 pipeline {
   agent any
   stages {
