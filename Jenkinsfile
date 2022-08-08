@@ -1,4 +1,5 @@
 // Jenkinsfile (Declarative Pipeline)
+import  com.cloudbees.plugins.credentials.common.AbstractIdCredentialsListBoxModel
 import hudson.util.RemotingDiagnostics
 import jenkins.model.Jenkins
 pipeline {
