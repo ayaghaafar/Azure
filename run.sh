@@ -6,6 +6,7 @@ sudo apt-get install Jenkins
 sudo apt-get install Jenkins-lts
 sudo service start Jenkins
 # jenkins-plugin-cli --plugins configuration-as-code-groovy:1.1
+sudo apt install default-jdk
 java – jar jenkins-cli.jar –s http://localhost:8080/ enable-plugin configuration-as-code-groovy:1.1
 jar jenkins-cli.jar  -s http://localhost:8080/ -auth admin:password groovy = < Jenkinsfile
 # wget https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip
