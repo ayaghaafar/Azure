@@ -1,7 +1,11 @@
 sudo apt-get install groovy -y
 sudo apt-get install unzip
-sudo apt-get install openjdk-11-jre
-wget https://github.com/jenkinsci/configuration-as-code-groovy-plugin
+sudo apt-get install Jenkins
+sudo spt-get install Jenkins-lts
+sudo services start Jenkins-lts
+# jenkins-plugin-cli --plugins configuration-as-code-groovy:1.1
+Java – jar jenkins-cli.jar –s http://localhost:8080/ enable-plugin configuration-as-code-groovy:1.1
+jar jenkins-cli.jar  -s http://localhost:8080/ -auth admin:password groovy = < Jenkinsfile
 # wget https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip
 # unzip jenkinsfile-runner-1.0-beta-30.zip -d jenkinsfile-runner
 # chmod -R 777 jenkinsfile-runner
