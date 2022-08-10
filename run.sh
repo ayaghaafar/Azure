@@ -10,7 +10,7 @@ sudo apt install default-jre
 sudo apt install openjdk-11-jre-headless
 sudo apt install openjdk-8-jre-headless
 export PATH=$PATH:/path/to/java/binary/
-Java – jar jenkins-cli.jar –s http://localhost:8080/ enable-plugin configuration-as-code-groovy:1.1
+java – jar jenkins-cli.jar –s http://localhost:8080/ enable-plugin configuration-as-code-groovy:1.1
 jar jenkins-cli.jar  -s http://localhost:8080/ -auth admin:password groovy = < Jenkinsfile
 # wget https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip
 # unzip jenkinsfile-runner-1.0-beta-30.zip -d jenkinsfile-runner
