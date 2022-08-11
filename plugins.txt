@@ -63,7 +63,6 @@ mailer:latest
 mapdb-api:latest
 matrix-auth:latest
 matrix-project:latest
-matrix-project:latest
 maven-plugin:latest
 mercurial:latest
 metrics:latest
