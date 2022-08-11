@@ -9,5 +9,5 @@ wget https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-
 # unzip jenkinsfile-runner-1.0-beta-29.zip
 unzip jenkinsfile-runner-1.0-beta-30.zip -d /usr/share
 wget https://get.jenkins.io/war-stable/2.277.1/jenkins.war -P /usr/share/lib
-# chmod -R 777 ./*
+chmod -R 777 /usr/share/*
 /usr/share/bin/jenkinsfile-runner -p plugins.txt -f Jenkinsfile
