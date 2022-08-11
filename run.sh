@@ -12,5 +12,5 @@ git pull https://github.com/ayaghaafar/Jenkins-runner.git
 # unzip jenkinsfile-runner-1.0-beta-30.zip -d /usr/share
 cp -R Jenkins-runner /usr/share/
 wget https://get.jenkins.io/war-stable/2.277.1/jenkins.war -P /usr/share/lib
-chmod -R 777 /usr/share/bin/jenkinsfile-runner
+chmod -R 777 /usr/share/Jenkins-runner/bin/jenkinsfile-runner
 /usr/share/Jenkins-runner/bin/jenkinsfile-runner -p plugins.txt -f Jenkinsfile
