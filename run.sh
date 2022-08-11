@@ -9,4 +9,4 @@ chmod -R 777 ./*
 # export JAVA_OPTS="-Djenkins.model.Jenkins.slaveAgentPort=50000 -Djenkins.model.Jenkins.slaveAgentPortEnforce=true -Dhudson.model.LoadStatistics.clock=1000"
 # sudo apt-get install default-jdk
 # sudo apt-get install default-jre
-./bin/jenkinsfile-runner -w jenkins.war -p plugins.txt -f Jenkinsfile
+./bin/jenkinsfile-runner -p plugins.txt -f Jenkinsfile
