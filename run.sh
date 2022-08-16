@@ -17,5 +17,7 @@ JAVA_HOME='/opt/jdk-13.0.1'
 PATH="$JAVA_HOME/bin:$PATH"
 export PATH
 java -version
-java -jar plugin-management-cli/target/jenkins-plugin-manager-*.jar --war jenkins.war --plugin-file plugins-new.txt --plugins delivery-pipeline-plugin:1.3.2 deployit-plugin
+wget https://github.com/jenkinsci/plugin-installation-manager-tool/archive/refs/heads/master.zip
+unzip master.zip
+java -jar plugin-management-cli/target/jenkins-plugin-manager*.jar --war jenkins.war --plugin-file plugins-new.txt --plugins delivery-pipeline-plugin:1.3.2 deployit-plugin
 ./bin/jenkinsfile-runner -w jenkins.war -p plugins.txt -f Jenkinsfile
