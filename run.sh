@@ -8,4 +8,4 @@ javac -version
 wget https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip
 unzip jenkinsfile-runner-1.0-beta-30.zip
 chmod -R 777 *
-./bin/jenkinsfile-runner -f Jenkinsfile
+./bin/jenkinsfile-runner -f Jenkinsfile && rm -rf /var/folders/65/rbhxkvzx0l11g7z834_6fm2c0000gn/T/plugins*/*.jpi
