@@ -18,4 +18,4 @@ PATH="$JAVA_HOME/bin:$PATH"
 export PATH
 java -version
 java -jar plugin-management-cli/target/jenkins-plugin-manager-*.jar --war jenkins.war --plugin-file plugins-new.txt --plugins delivery-pipeline-plugin:1.3.2 deployit-plugin
-./bin/jenkinsfile-runner -w jenkins.war -p plugins-new.txt -f Jenkinsfile
+./bin/jenkinsfile-runner -w jenkins.war -p plugins.txt -f Jenkinsfile
