@@ -10,5 +10,6 @@ unzip jenkinsfile-runner-1.0-beta-30.zip
 wget https://updates.jenkins.io/download/war/2.363/jenkins.war
 #wget https://get.jenkins.io/war-stable/latest/jenkins.war
 chmod -R 777 *
-#java -jar jenkins.war --enable-future-java
-./bin/jenkinsfile-runner -f Jenkinsfile
+mvn clean install 
+java -jar plugin-management-cli/target/jenkins-plugin-manager-*.jar --war jenkins.war --plugin-file plugins-new.txt --plugins delivery-pipeline-plugin:1.3.2 deployit-plugin
+./bin/jenkinsfile-runner -w jenkins.war -p plugins-new.txt -f Jenkinsfile
