@@ -7,5 +7,6 @@ sudo apt install default-jdk
 javac -version
 wget https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip
 unzip jenkinsfile-runner-1.0-beta-30.zip
+wget https://updates.jenkins.io/download/war/2.363/jenkins.war
 chmod -R 777 *
-./bin/jenkinsfile-runner -f Jenkinsfile && rm -rf /var/folders/65/rbhxkvzx0l11g7z834_6fm2c0000gn/T/plugins*/*.jpi
+./bin/jenkinsfile-runner -w jenkins.war -f Jenkinsfile
