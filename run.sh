@@ -10,5 +10,4 @@ unzip jenkinsfile-runner-1.0-beta-30.zip
 wget https://updates.jenkins.io/download/war/2.363/jenkins.war
 chmod -R 777 jenkins.war
 chmod -R 777 *
-java -jar jenkins.war --enable-future-java
-./bin/jenkinsfile-runner --httpPort='9090' -f Jenkinsfile
+./bin/jenkinsfile-runner -w jenkins.war --httpPort='9090' -f Jenkinsfile
