@@ -26,4 +26,4 @@ cd ../
 sudo systemctl start jetty9
 sudo systemctl status jetty9
 netstat -nltp
-./bin/jenkinsfile-runner -w jenkins.war --httpsPort=9090 -p plugin-installation-manager-tool-master/plugins -f Jenkinsfile
+./bin/jenkinsfile-runner -w jenkins.war --httpPort=9090 -p plugin-installation-manager-tool-master/plugins -f Jenkinsfile
