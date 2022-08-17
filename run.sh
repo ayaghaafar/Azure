@@ -20,7 +20,7 @@ cd plugin-installation-manager-tool-master/
 #mvn install
 #java -jar plugin-management-cli/target/jenkins-plugin-manager-*.jar --war ../jenkins.war --plugin-file ../plugins.txt -d plugins --plugins delivery-pipeline-plugin:1.3.2 deployit-plugin
 java -jar ../jenkins-plugin-manager-2.12.8.jar --war ../jenkins.war --plugin-file ../plugins.txt -d plugins
-ls target
+ls
 cd ../
 sudo systemctl start jetty9
 sudo systemctl status jetty9
