@@ -10,8 +10,6 @@
 //   }
 // }
 
-#!/usr/bin/env groovy
-
 def pipeline {
     agent any
     stages {
