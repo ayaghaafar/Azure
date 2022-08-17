@@ -21,5 +21,5 @@ unzip master.zip
 wget https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.12.8/jenkins-plugin-manager-2.12.8.jar
 cd plugin-installation-manager-tool-master/
 mvn clean install
-java -jar plugin-management-cli/target/jenkins-plugin-manager-*.jar --war jenkins.war --plugin-file plugins.txt -d plugins --plugins delivery-pipeline-plugin:1.3.2 deployit-plugin
+java -jar plugin-management-cli/target/jenkins-plugin-manager-*.jar --war plugin-installation-manager-tool-master/plugin-management-library/src/test/resources/jenkinsversiontest.war --plugin-file plugin-installation-manager-tool-master/plugin-management-library/src/test/resources/io/jenkins/tools/pluginmanager/impl/plugins.txt -d plugins --plugins delivery-pipeline-plugin:1.3.2 deployit-plugin
 #./bin/jenkinsfile-runner -w jenkins.war -p plugins.txt -f Jenkinsfile
