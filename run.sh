@@ -19,10 +19,11 @@ unzip master.zip
 wget https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.12.8/jenkins-plugin-manager-2.12.8.jar
 cd plugin-installation-manager-tool-master/
 mvn install
-java -jar plugin-management-cli/target/jenkins-plugin-manager-*.jar --war ../jenkins.war --plugin-file ../plugins.txt -d plugins --plugins delivery-pipeline-plugin:1.3.2 deployit-plugin
+#java -jar plugin-management-cli/target/jenkins-plugin-manager-*.jar --war ../jenkins.war --plugin-file ../plugins.txt -d plugins --plugins delivery-pipeline-plugin:1.3.2 deployit-plugin
+java -jar ../jenkins-plugin-manager-2.12.8.jar --war ../jenkins.war --plugin-file ../plugins.txt -d plugins --plugins delivery-pipeline-plugin:1.3.2 deployit-plugin
 ls target
 cd ../
 sudo systemctl start jetty9
 sudo systemctl status jetty9
 netstat -nltp
-./bin/jenkinsfile-runner -w jenkins.war --httpPort=9090 -p plugin-installation-manager-tool-master/plugins -f Jenkinsfile
+./bin/jenkinsfile-runner -w jenkins.war --httpsPort=9090 -p plugin-installation-manager-tool-master/plugins -f Jenkinsfile
