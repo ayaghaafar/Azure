@@ -17,5 +17,7 @@ wget https://mirrors.jenkins.io/war-stable/2.346.3/jenkins.war
 wget https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.12.8/jenkins-plugin-manager-2.12.8.jar
 wget https://github.com/jenkinsci/plugin-installation-manager-tool/archive/refs/heads/master.zip
 unzip master.zip
-java -jar jenkins-plugin-manager-2.12.8.jar --war jenkins.war --plugin-file plugins.txt -d plugins
+cd plugin-installation-manager-tool-master/
+java -jar ../jenkins-plugin-manager-2.12.8.jar --war ../jenkins.war --plugin-file ../plugins.txt -d plugins
+cd ../
 ./bin/jenkinsfile-runner --httpPort=9090 -w jenkins.war -p plugin-installation-manager-tool-master/plugins -f Jenkinsfile
