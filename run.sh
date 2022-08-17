@@ -1,7 +1,8 @@
-sudo apt-get install groovy -y
 sudo apt-get install unzip
 sudo apt-get install git
 sudo apt install jetty9
+sudo systemctl start jetty9
+sudo systemctl status jetty9
 wget https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip
 unzip jenkinsfile-runner-1.0-beta-30.zip
 chmod -R 777 *
@@ -12,17 +13,9 @@ JAVA_HOME='/opt/jdk-13.0.1'
 PATH="$JAVA_HOME/bin:$PATH"
 export PATH
 java -version
-wget https://github.com/jenkinsci/plugin-installation-manager-tool/archive/refs/heads/master.zip
-unzip master.zip
 wget https://mirrors.jenkins.io/war-stable/2.346.3/jenkins.war
 wget https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.12.8/jenkins-plugin-manager-2.12.8.jar
 cd plugin-installation-manager-tool-master/
-#mvn install
-#java -jar plugin-management-cli/target/jenkins-plugin-manager-*.jar --war ../jenkins.war --plugin-file ../plugins.txt -d plugins --plugins delivery-pipeline-plugin:1.3.2 deployit-plugin
 java -jar ../jenkins-plugin-manager-2.12.8.jar --war ../jenkins.war --plugin-file ../plugins.txt -d plugins
-ls
 cd ../
-sudo systemctl start jetty9
-sudo systemctl status jetty9
-netstat -nltp
 ./bin/jenkinsfile-runner --httpPort=9090 -w jenkins.war -p plugin-installation-manager-tool-master/plugins -f Jenkinsfile
