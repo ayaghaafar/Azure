@@ -24,4 +24,4 @@ mvn clean install
 java -jar plugin-management-cli/target/jenkins-plugin-manager-*.jar --war ../jenkins.war --plugin-file ../plugins.txt -d plugins --plugins delivery-pipeline-plugin:1.3.2 deployit-plugin
 ls
 cd ../
-./bin/jenkinsfile-runner -p plugin-installation-manager-tool-master/plugins -f Jenkinsfile
+./bin/jenkinsfile-runner -w jenkins.war -p plugin-installation-manager-tool-master/plugins -f Jenkinsfile
