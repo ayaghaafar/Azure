@@ -4,8 +4,6 @@ sudo apt-get install git
 sudo apt install jetty9
 wget https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip
 unzip jenkinsfile-runner-1.0-beta-30.zip
-wget https://updates.jenkins.io/download/war/2.363/jenkins.war
-#wget https://get.jenkins.io/war-stable/latest/jenkins.war
 chmod -R 777 *
 wget https://download.java.net/java/GA/jdk13.0.1/cec27d702aa74d5a8630c65ae61e4305/9/GPL/openjdk-13.0.1_linux-x64_bin.tar.gz
 tar -xvf openjdk-13.0.1_linux-x64_bin.tar.gz
@@ -16,6 +14,7 @@ export PATH
 java -version
 wget https://github.com/jenkinsci/plugin-installation-manager-tool/archive/refs/heads/master.zip
 unzip master.zip
+wget https://mirrors.jenkins.io/war-stable/2.346.3/jenkins.war
 wget https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.12.8/jenkins-plugin-manager-2.12.8.jar
 cd plugin-installation-manager-tool-master/
 #mvn install
