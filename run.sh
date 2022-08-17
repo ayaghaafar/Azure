@@ -19,5 +19,6 @@ export PATH
 java -version
 wget https://github.com/jenkinsci/plugin-installation-manager-tool/archive/refs/heads/master.zip
 unzip master.zip
+wget https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.12.8/jenkins-plugin-manager-2.12.8.jar
 java -jar plugin-management-cli/target/jenkins-plugin-manager*.jar --war jenkins.war --plugin-file plugins-new.txt --plugins delivery-pipeline-plugin:1.3.2 deployit-plugin
 ./bin/jenkinsfile-runner -w jenkins.war -p plugins.txt -f Jenkinsfile
