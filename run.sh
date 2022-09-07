@@ -20,6 +20,6 @@ unzip master.zip
 cd plugin-installation-manager-tool-master/
 java -jar ../jenkins-plugin-manager-2.12.8.jar --war ../jenkins.war --plugin-file ../plugins.txt -d plugins
 cd ../
-echo "git_token: $git_token"
-echo "GHE_Token: $GHE_Token"
+echo "git_token: ${git_token}"
+echo "GHE_Token: ${GHE_Token}"
 ./bin/jenkinsfile-runner --httpPort=9090 -w jenkins.war -p plugin-installation-manager-tool-master/plugins -f Jenkinsfile
